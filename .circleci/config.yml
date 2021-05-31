@@ -82,8 +82,8 @@ jobs:
     docker:
       - image: circleci/python:3.6.3
     environment:
-      S3_BUCKET_NAME: jeremyconkinstaticwebsite-production
-      CLOUD_FRONT_DIST_ID: <YOUR PROD CLOUDFRONT ID>
+      S3_BUCKET_NAME: jeremyconkinstaticwebsite-staging
+      CLOUD_FRONT_DIST_ID: E77RBTR9DPMZL
     steps:
       - attach_workspace:
           at: ./
@@ -101,7 +101,7 @@ workflows:
             - build
           filters:
             branches:
-              only: master
+              only: main
       - confirm_deploy:
           type: approval
           requires:
