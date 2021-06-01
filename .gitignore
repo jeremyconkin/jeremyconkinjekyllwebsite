@@ -3,6 +3,9 @@
 .AppleDouble
 .LSOverride
 
+# Jekyll
+.jekyll-cache/
+
 # Icon must end with two \r
 Icon
 
