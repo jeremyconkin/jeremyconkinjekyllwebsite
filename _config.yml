@@ -48,9 +48,9 @@ author_location: "Denver, Colorado"
 author_image: /images/authorimage.png
 
 # Sidebar Add banner
-banner_url: "https://jeremyconkin.com"
-banner_image: images/banner.jpg
-banner_image_alt: "Alt text"
+#banner_url: "https://jeremyconkin.com"
+#banner_image: images/banner.jpg
+#banner_image_alt: "Alt text"
 
 # Sidebar newsletter widget - add your form action url for MailChimp signup form here
 # mailchimp_url: "//justgoodthemes.us3.list-manage.com/subscribe/post?u=78f1bab16028354caeb23aecd&amp;id=4a7330d117"
