@@ -2,7 +2,7 @@
 layout: post
 title:  "Beacons: You’re Doing it Wrong"
 date:   2015-11-13
-image: /images/posts/beacons/beacons.jpg
+image: /images/posts/beacons.jpg
 tags: [mobile, tech, ble]
 ---
 
