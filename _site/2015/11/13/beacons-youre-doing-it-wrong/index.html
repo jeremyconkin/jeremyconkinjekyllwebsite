@@ -15,14 +15,14 @@
 <link rel="canonical" href="http://localhost:4000/2015/11/13/beacons-youre-doing-it-wrong/" />
 <meta property="og:url" content="http://localhost:4000/2015/11/13/beacons-youre-doing-it-wrong/" />
 <meta property="og:site_name" content="Jeremy Conkin" />
-<meta property="og:image" content="http://localhost:4000/images/posts/beacons.jpg" />
+<meta property="og:image" content="http://localhost:4000/images/posts/beacons/beacons.jpg" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2015-11-13T00:00:00-07:00" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta property="twitter:image" content="http://localhost:4000/images/posts/beacons.jpg" />
+<meta property="twitter:image" content="http://localhost:4000/images/posts/beacons/beacons.jpg" />
 <meta property="twitter:title" content="Beacons: You’re Doing it Wrong" />
 <script type="application/ld+json">
-{"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2015/11/13/beacons-youre-doing-it-wrong/"},"url":"http://localhost:4000/2015/11/13/beacons-youre-doing-it-wrong/","@type":"BlogPosting","image":"http://localhost:4000/images/posts/beacons.jpg","description":"Beacons are a powerful technology at the forefront of bridging digital and physical experiences. They provide assitive technology to those with blindness and show us how to navigate airports, but how? Beacons are often misunderstood. They are used for less than ideal purposes with hacky implementations. Let’s clarify when and how to use beacons.","headline":"Beacons: You’re Doing it Wrong","dateModified":"2015-11-13T00:00:00-07:00","datePublished":"2015-11-13T00:00:00-07:00","@context":"https://schema.org"}</script>
+{"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2015/11/13/beacons-youre-doing-it-wrong/"},"url":"http://localhost:4000/2015/11/13/beacons-youre-doing-it-wrong/","@type":"BlogPosting","image":"http://localhost:4000/images/posts/beacons/beacons.jpg","description":"Beacons are a powerful technology at the forefront of bridging digital and physical experiences. They provide assitive technology to those with blindness and show us how to navigate airports, but how? Beacons are often misunderstood. They are used for less than ideal purposes with hacky implementations. Let’s clarify when and how to use beacons.","headline":"Beacons: You’re Doing it Wrong","dateModified":"2015-11-13T00:00:00-07:00","datePublished":"2015-11-13T00:00:00-07:00","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     <link rel="shortcut icon" href="/favicon.ico">
@@ -98,7 +98,7 @@
             <div class="post-header-wrap">
                 
                 <div class="post-thumbnail">
-                    <img src="/images/posts/beacons.jpg"
+                    <img src="/images/posts/beacons/beacons.jpg"
                         alt="Beacons: You’re Doing it Wrong">
                 </div>
                 
@@ -138,22 +138,22 @@ Don’t try to fit a square peg into a round hole. If your use case is different
 </blockquote>
 
 <p>Not This:
-<img src="/images/posts/notThisBeacons1.png" alt="Complex Beacon Scenario" /></p>
+<img src="/images/posts/beacons/notThisBeacons1.png" alt="Complex Beacon Scenario" /></p>
 
 <p>This:
-<img src="/images/posts/thisBeacons1.png" alt="Simple Beacon Scenario" /></p>
+<img src="/images/posts/beacons/thisBeacons1.png" alt="Simple Beacon Scenario" /></p>
 
 <h3>Myth: Beacons Have Precise Ranges</h3>
 
 <p>Beacons aren’t fit for coupon redemption or mobile payments. The range is too imprecise. Wallet or QR codes get that job done. Apple’s documentation states that beacon accuracy “is heavily subject to variations in an RF environment.” Also, the range isn’t a sphere. All sorts of environmental factors change the shape of a beacon’s range.</p>
 
 <p>Not This:
-<img src="/images/posts/notThisBeacons2.png" alt="Ideal Beacon Scenario" /></p>
+<img src="/images/posts/beacons/notThisBeacons2.png" alt="Ideal Beacon Scenario" /></p>
 
 <p>Beacons are built on Bluetooth Low Energy (BLE) which is subject to interference, particularly from water. Because 60% of the human body is water, crowded spaces cause some crazy variation in beacon ranges.</p>
 
 <p>This:
-<img src="/images/posts/thisBeacons2.png" alt="Real World Beacon Scenario" /></p>
+<img src="/images/posts/beacons/thisBeacons2.png" alt="Real World Beacon Scenario" /></p>
 
 <p>Yes, beacons can be used for indoor wayfinding, but they’re not as robust as GPS. For navigation, the phone is constantly searching for nearby beacons. This is the opposite behavior of the ideal beacon use case. Apps are asking for beacons rather than being told when beacons are nearby. <strong>Searching for beacons kills battery life!</strong></p>
 
@@ -165,23 +165,23 @@ Don’t try to fit a square peg into a round hole. If your use case is different
 <p><a href="https://en.wikipedia.org/wiki/True-range_multilateration">Trilateration</a> is the process of finding a location, assuming the location is known distances from known points. Put another way, it finds the intersection of three circles.</p>
 
 <p>Not this:
-<img src="/images/posts/notThisBeacons3.png" alt="Won't Work Beacon Scenario" /></p>
+<img src="/images/posts/beacons/notThisBeacons3.png" alt="Won't Work Beacon Scenario" /></p>
 
 <p>The problem with this process is that beacons don’t give a precise distance to the device. They give a range.</p>
 
 <p>This:
-<img src="/images/posts/thisBeacons3.png" alt="More Realistic Beacon Scenario" /></p>
+<img src="/images/posts/beacons/thisBeacons3.png" alt="More Realistic Beacon Scenario" /></p>
 
 <p>Still, this info can give us a pretty good idea of where the phone is. Here’s how:</p>
 
 <ol>
   <li>
     <p>Find circle intersections. Use trilateration to find the intersection points of all inner and outer ranges of the phone’s distance from each beacon.
-<img src="/images/posts/thisBeacons4.png" alt="Find Intersections" /></p>
+<img src="/images/posts/beacons/thisBeacons4.png" alt="Find Intersections" /></p>
   </li>
   <li>
     <p>Throw out bad points. Points that are inside the minimum or outside the maximum of any beacon’s range are invalid.
-<img src="/images/posts/thisBeacons5.png" alt="Remove Bad Points" /></p>
+<img src="/images/posts/beacons/thisBeacons5.png" alt="Remove Bad Points" /></p>
   </li>
   <li>
     <p>Find the centroid. The centroid is calculated by averaging the positions of the remaining points.</p>
@@ -320,6 +320,8 @@ Don’t try to fit a square peg into a round hole. If your use case is different
     <section class="widget widget-recent-posts">
         <h2 class="widget-title line-accent">Latest Posts</h2>
         <ul class="recent-posts">
+            
+            <li class="recent-item"><a href="/2021/06/02/app-analytics-frameworks/">How to Integrate Analytics Frameworks in your App</a> <span>June 2, 2021</span></li>
             
             <li class="recent-item"><a href="/2015/11/14/5-tips-for-omnichannel-software/">5 Tips for Building Omnichannel Software</a> <span>November 14, 2015</span></li>
             

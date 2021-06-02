@@ -2,7 +2,7 @@
 layout: post
 title:  "Beacons: You’re Doing it Wrong"
 date:   2015-11-13
-image: /images/posts/beacons.jpg
+image: /images/posts/beacons/beacons.jpg
 tags: [mobile, tech, ble]
 ---
 
@@ -32,22 +32,22 @@ Beacons are not terminals of information that can respond to information from th
 > Beacons are dumb. Their uses are powerful.
 
 Not This:
-![Complex Beacon Scenario](/images/posts/notThisBeacons1.png)
+![Complex Beacon Scenario](/images/posts/beacons/notThisBeacons1.png)
 
 This:
-![Simple Beacon Scenario](/images/posts/thisBeacons1.png)
+![Simple Beacon Scenario](/images/posts/beacons/thisBeacons1.png)
 
 ### Myth: Beacons Have Precise Ranges
 
 Beacons aren’t fit for coupon redemption or mobile payments. The range is too imprecise. Wallet or QR codes get that job done. Apple’s documentation states that beacon accuracy “is heavily subject to variations in an RF environment.” Also, the range isn’t a sphere. All sorts of environmental factors change the shape of a beacon’s range.
 
 Not This:
-![Ideal Beacon Scenario](/images/posts/notThisBeacons2.png)
+![Ideal Beacon Scenario](/images/posts/beacons/notThisBeacons2.png)
 
 Beacons are built on Bluetooth Low Energy (BLE) which is subject to interference, particularly from water. Because 60% of the human body is water, crowded spaces cause some crazy variation in beacon ranges.
 
 This:
-![Real World Beacon Scenario](/images/posts/thisBeacons2.png)
+![Real World Beacon Scenario](/images/posts/beacons/thisBeacons2.png)
 
 Yes, beacons can be used for indoor wayfinding, but they’re not as robust as GPS. For navigation, the phone is constantly searching for nearby beacons. This is the opposite behavior of the ideal beacon use case. Apps are asking for beacons rather than being told when beacons are nearby. **Searching for beacons kills battery life!**
 
@@ -59,20 +59,20 @@ If you do use beacons for wayfinding, know that reverse-engineering the phone’
 [Trilateration](https://en.wikipedia.org/wiki/True-range_multilateration) is the process of finding a location, assuming the location is known distances from known points. Put another way, it finds the intersection of three circles.
 
 Not this:
-![Won't Work Beacon Scenario](/images/posts/notThisBeacons3.png)
+![Won't Work Beacon Scenario](/images/posts/beacons/notThisBeacons3.png)
 
 The problem with this process is that beacons don’t give a precise distance to the device. They give a range.
 
 This:
-![More Realistic Beacon Scenario](/images/posts/thisBeacons3.png)
+![More Realistic Beacon Scenario](/images/posts/beacons/thisBeacons3.png)
 
 Still, this info can give us a pretty good idea of where the phone is. Here’s how:
 
 1. Find circle intersections. Use trilateration to find the intersection points of all inner and outer ranges of the phone’s distance from each beacon.
-![Find Intersections](/images/posts/thisBeacons4.png)
+![Find Intersections](/images/posts/beacons/thisBeacons4.png)
 
 2. Throw out bad points. Points that are inside the minimum or outside the maximum of any beacon’s range are invalid.
-![Remove Bad Points](/images/posts/thisBeacons5.png)
+![Remove Bad Points](/images/posts/beacons/thisBeacons5.png)
 
 3. Find the centroid. The centroid is calculated by averaging the positions of the remaining points.
 
