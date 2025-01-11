@@ -9,7 +9,7 @@
 title: "Jeremy Conkin"
 
 # Tagline next to the site title
-tagline: "Digital Product Development"
+tagline: "Digital Solutions Leader"
 
 # A description of your site for social meta tag, search engines, and feed.xml
 description: "I love custom user experiences and helping delivery teams be their best."
@@ -27,12 +27,12 @@ url: "https://jeremyconkin.com"
 
 # Site navigation - each item must have a title and a url.
 navigation:
-- text: Home
-  url: /
-- text: About
-  url: /about/
-- text: Archives
-  url: /tags/
+#- text: Home
+#  url: /
+#- text: About
+#  url: /about/
+#- text: Archives
+#  url: /tags/
 
 # The shortname for your Disqus site to enable comments.
 #disqus: "justgoodthemes"
@@ -58,7 +58,7 @@ author_image: /images/authorimage.png
 # Social links in the site footer
 twitter_url: "https://twitter.com/jeremyconkin"
 github_url: "https://github.com/jeremyconkin/"
-medium_url: "https://medium.com/@jeremyconkin"
+#medium_url: "https://medium.com/@jeremyconkin"
 instagram_url: "https://www.instagram.com/jeremyconkin"
 linkedin_url: "https://www.linkedin.com/in/jeremyconkin/"
 
