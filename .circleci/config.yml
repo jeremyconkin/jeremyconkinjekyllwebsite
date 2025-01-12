@@ -7,7 +7,9 @@ references:
     run:
       name: Install AWS CLI
       command: |
-        sudo pip install awscli --upgrade
+        curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+        python get-pip.py
+        sudo pip install awscli
   add_aws_credentials: &add_aws_credentials
     run:
       name: Set AWS credentials
@@ -31,7 +33,7 @@ jobs:
   build:
     <<: *defaults
     docker:
-      - image: cimg/ruby:3.4.1
+      - image: circleci/ruby:2.6.0-node
     environment:
       BUNDLE_PATH: ~/repo/vendor/bundle
     steps:
