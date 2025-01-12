@@ -7,8 +7,7 @@ references:
     run:
       name: Install AWS CLI
       command: |
-        curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
-        python get-pip.py
+        pip --version
         sudo pip install awscli
   add_aws_credentials: &add_aws_credentials
     run:
