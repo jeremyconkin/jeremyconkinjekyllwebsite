@@ -8,7 +8,7 @@ references:
       name: Install AWS CLI
       command: |
         pip --version
-        sudo pip install awscli
+        pip install awscli
   add_aws_credentials: &add_aws_credentials
     run:
       name: Set AWS credentials
@@ -94,12 +94,12 @@ jobs:
       - *clear_cloudfront_cache
 workflows:
   version: 2
-  test-deploy:
+  build-and-deploy:
     jobs:
-      - build
+      #- build
       - deploy_staging:
-          requires:
-            - build
+          #requires:
+          #  - build
           filters:
             branches:
               only: main
