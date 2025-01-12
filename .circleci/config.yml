@@ -68,7 +68,7 @@ jobs:
   deploy_staging:
     <<: *defaults
     docker:
-      - image: circleci/python:3.6.3
+      - image: circleci/python:3.14.0
     environment:
       S3_BUCKET_NAME: jeremyconkinstaticwebsite-staging
       CLOUD_FRONT_DIST_ID: E77RBTR9DPMZL
@@ -82,7 +82,7 @@ jobs:
   deploy_production:
     <<: *defaults
     docker:
-      - image: circleci/python:3.6.3
+      - image: circleci/python:3.14.0
     environment:
       S3_BUCKET_NAME: jeremyconkin.com
       CLOUD_FRONT_DIST_ID: ENLBGYJRDBH13
