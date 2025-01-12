@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://localhost:4000/2015/11/13/beacons-youre-doing-it-wrong/</loc>
+<loc>https://jeremyconkin.com/2015/11/13/beacons-youre-doing-it-wrong/</loc>
 <lastmod>2015-11-13T00:00:00-07:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/2015/11/14/5-tips-for-omnichannel-software/</loc>
+<loc>https://jeremyconkin.com/2015/11/14/5-tips-for-omnichannel-software/</loc>
 <lastmod>2015-11-14T00:00:00-07:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/2021/06/02/app-analytics-frameworks/</loc>
+<loc>https://jeremyconkin.com/2021/06/02/app-analytics-frameworks/</loc>
 <lastmod>2021-06-02T00:00:00-06:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/about/</loc>
+<loc>https://jeremyconkin.com/about/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/tags/</loc>
+<loc>https://jeremyconkin.com/tags/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/</loc>
+<loc>https://jeremyconkin.com/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/style-guide/</loc>
+<loc>https://jeremyconkin.com/style-guide/</loc>
 </url>
 </urlset>
